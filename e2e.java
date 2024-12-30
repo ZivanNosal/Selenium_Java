@@ -13,7 +13,7 @@ public class e2e {
 		driver.manage().window().maximize();
 		driver.get("https://rahulshettyacademy.com/dropdownsPractise/");
 		
-		//"One way" radiombutton
+		//"One way" radiobutton
 		driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_0")).click();
 		
 		//dropdowns (from/to):
