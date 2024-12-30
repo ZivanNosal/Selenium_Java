@@ -16,17 +16,17 @@ public class e2e {
 		//"One way" radiobutton
 		driver.findElement(By.id("ctl00_mainContent_rbtnl_Trip_0")).click();
 		
-		//dropdowns (from/to):
+		//dropdowns (from/to)
 		driver.findElement(By.id("ctl00_mainContent_ddl_originStation1_CTXTaction")).click();
 		driver.findElement(By.xpath("//a[@value='BLR']")).click();
 		Thread.sleep(2000);
-		//parent-child relatioship xpath (note: mezera mezi parent xpath a child xpath):
+		//parent-child relatioship xpath (note: space between parent xpath and child xpath)
 		driver.findElement(By.xpath("//div[@id='glsctl00_mainContent_ddl_destinationStation1_CTNR'] //a[@value='MAA']")).click();
 		
-		//calendar - current date:
+		//calendar - current date
 		driver.findElement(By.cssSelector(".ui-state-default.ui-state-highlight")).click();
 		
-		//validace ze kalendar vypada disabled (pro one way):
+		//validation that calendar looks disabled (for one way)
 		if (driver.findElement(By.id("Div1")).getAttribute("style").contains("0.5"))
 		{
 			System.out.println("it is disabled");
@@ -53,7 +53,7 @@ public class e2e {
 		Assert.assertEquals(driver.findElement(By.id("divpaxinfo")).getText(), "5 Adult");
 		System.out.println(driver.findElement(By.id("divpaxinfo")).getText());
 		
-		//button:
+		//button
 		driver.findElement(By.cssSelector("#ctl00_mainContent_btn_FindFlights")).click();
 		
 
